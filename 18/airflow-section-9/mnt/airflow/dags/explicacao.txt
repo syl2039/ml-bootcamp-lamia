@@ -1,0 +1,3 @@
+as dags dos arquivos abaixo "finance_dag.py" e "marketing_dag.py" são exatamente a mesma coisa,
+as duas são executadas diariamente e possuem uma tarefa ficticia e uma que printa "It works", então
+não vi necessidade de comentar ou fazer testes com elas já que são extremamente simples

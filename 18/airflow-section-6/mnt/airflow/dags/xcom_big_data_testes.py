@@ -11,6 +11,13 @@ import datetime
 import time
 import calendar
 
+# Informações gerais
+# - Removi um fluxo de execução
+
+# Resultados
+# Tentou executar em paralelo mas não funcionou porque não conseguia acessar
+# os dados do xcom porque eles ainda não tinham sido armazenados
+
 args = { # Argumentos 
     'owner': 'Airflow', # Nome do dono
     'start_date': airflow.utils.dates.days_ago(1), # Data de início (1 dia atrás)
@@ -60,5 +67,3 @@ with DAG(dag_id='xcom_dag_big', default_args=args, schedule_interval="@once") as
         provide_context=True, # da o contexto
         python_callable=get_pushed_xcom_with_return # Chama a função
     )
-    # Fluxo de Execução
-    t0 >> t1
